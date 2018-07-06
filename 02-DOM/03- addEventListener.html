@@ -38,7 +38,7 @@
         //bouton.onclick = deplacement;  /// on écrit la fonction sans sa paire de () sinon elle est appelée et exécutée immédiatement sans attendre l'ordre du clic dont elle dépend
         //bouton.onclick = couleur;  // on constate que le carré devient jaune mais ne se déplace plus, car c'est le dernier évènement qui prévaut avec cette syntaxe onclick.
 
-        // Pour s'ensortir on utilise addEventListener :
+        // Pour s'en sortir on utilise addEventListener :
         bouton.addEventListener('click', deplacement);
         bouton.addEventListener('click', couleur);  // l'évènement click s'écrit sans le "on", et la fonction couleur sans sa paire de () pour ne pas q'elle s'exécute immédiatement. La fonction couleur est appelée une fonction CALLBACK car elle est passée en argument (= en paramètre) d'une autre fonction, ici dans addEventListener(). En effet, elle attend l'ordre de cette dernière pour s'exécuter.
 
