@@ -23,20 +23,25 @@
         <input type="submit" value="se connecter">
     </form >
 
-    <script>
-        // Exercice : Lorsque vous êtes en focus (= évènement "focus") sur input, sa bordure devient rouge. Puis lorsque vous êtes en blur (= évènement "blur") sur un input, sa bordure redevient normale. Utilisez addEventListener.
-        var pseudo = document.querySelector('#pseudo');
-        var mdp = document.querySelector('#mdp');
-
-          function couleur() {
-            pseudo.style.border = '2px border red';  
-        }
-        pseudo.addEventListener('click', pseudo); 
-        pseudo.addEventListener('click', function(){
-             pseudo.style.border = '1px solid red';
-         });
-    </script>
-
     
+        <!-- Exercice : Lorsque vous êtes en focus (= évènement "focus") sur input, sa bordure devient rouge. Puis lorsque vous êtes en blur (= évènement "blur") sur un input, sa bordure redevient normale. Utilisez addEventListener.
+        var pseudo = document.querySelector('#pseudo');
+        var mdp = document.querySelector('#mdp'); --> 
+
+      
+    <script>
+// Correction avec une boucle for : 
+var inputs = document.querySelectorAll('.focus');
+
+for (var i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener('focus', function(){
+        this.style.border = '1px solid red';
+    });
+
+    inputs[i].addEventListener('blur', function(){
+        this.style.border = '';
+    })
+}
+</script>
 </body>
 </html>
