@@ -153,7 +153,7 @@ $('#vert').hover(
     });
 
     $('#effacer').click(function(){
-        $('#galerie img').hide();
+        $('#galerie img').hide();                       
     });
 
     // :first et :last :
